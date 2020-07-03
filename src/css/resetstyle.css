@@ -1,0 +1,38 @@
+body,ol,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,tr,tr,td,form,a,img,span,div,i,em,b,strong,hr,sub,sup,input,select,option,textarea,table,tr,td,th{margin: 0;padding: 0;}
+
+ul,ol{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	display: block;
+	color: #000000;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+img{
+	display: block;
+}
+
+.clear::after {
+				content: ".";
+				clear: both;
+				display: block;
+				height: 0;
+				overflow: hidden;
+				visibility: hidden;
+				font-size: 1px;
+				}
+				
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+}
+
+i,em{
+	font-style: normal;
+}
+

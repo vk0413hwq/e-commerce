@@ -1,1 +1,0 @@
-"use strict";var fn=function(){console.log("我读取到了数据")};fn();var xhr=new XMLHttpRequest;xhr.open("get","/going"),xhr.send(),xhr.onload=function(){console.log(xhr.responseText)};
