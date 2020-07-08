@@ -9,12 +9,26 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/resetstyle.css">
     <script src="./../lib/jquery-1.12.4.js"></script>
+    <script src="./../lib/js/template-web.js"></script>
 </head>
 <body>
+    <div class="lazy-load"></div>
     <script src="./../lib/swiper/js/swiper.js"></script>
     <!-- 顶部通栏 -->
     <script src="./../js/header.js"></script>
-    
+
+    <!-- 移动屏幕  fixed定位 -->
+    <div class="one_fixed">
+        <div class="fixed_main">
+            <img src="./../images/loginlogo.jpg" alt="">
+            <div class="fixed_ipt">
+                <input type="text" >
+            <button class="sr_btn">搜索</button>
+            </div>
+            <a href="./shopcart.html">购物车</a>
+        </div>
+    </div>
+
     <!-- 搜索栏 -->
     <div class="bc">
         <!-- logo -->
@@ -27,7 +41,8 @@
             <!-- 搜索栏 -->
             <div class="search-right">
                 <input type="text" id="search-right-text">
-                <input type="button" id="search-right-btn" value="购物车">
+                <button class="sr_btn">搜索</button>
+               <a href="./shopcart.html">购物车</a>
                 <ul>
                     <li><a href="">沐浴露</a></li>
                     <li><a href="">混合</a></li>
@@ -41,11 +56,229 @@
             
             <!-- 二级菜单栏 -->
             <div class="search-down">
-                <ul>
-                    <li class="red">
+                <ul class="search-down_ahover">
+                    <li class="red" id="list_tar">
                         <a href="">全部类目</a>
+                        <!-- 二级菜单 -->
                         <ol class="search-list">
-                            <li>二级菜单</li>
+                           <li class="list_total">
+                               <div class="list_row">
+                                   <a href=""><h5>全球进口</h5></a>
+                                   <ul class="list_row_det">
+                                       <li><a href="">美容护肤</a></li>
+                                       <li><a href="">美容护肤</a></li>
+                                       <li><a href="">美容护肤</a></li>
+                                       <li><a href="">美容护肤</a></li>
+                                       <li><a href="">美容护肤</a></li>
+                                       <li><a href="">美容护肤</a></li>
+                                       <li><a href="">美容护肤</a></li>
+                                       <li><a href="">美容护肤</a></li>
+                                       <li><a href="">美容护肤</a></li>
+                                       <li><a href="">美容护肤</a></li>
+                                       <li><a href="">美容护肤</a></li>
+                                       <li><a href="">美容护肤</a></li>
+                                   </ul>
+                               </div>
+                                <div class="list_row">
+                                    <a href=""><h5>全球进口</h5></a>
+                                    <ul class="list_row_det">
+                                        <li><a href="">美容护肤</a></li>
+                                       <li><a href="">美容护肤</a></li>
+                                       <li><a href="">美容护肤</a></li>
+                                       <li><a href="">美容护肤</a></li>
+                                        <li><a href="">美容护肤</a></li>
+                                        <li><a href="">美容护肤</a></li>
+                                        <li><a href="">美容护肤</a></li>
+                                        <li><a href="">美容护肤</a></li>
+                                        <li><a href="">美容护肤</a></li>
+                                        <li><a href="">美容护肤</a></li>
+                                        <li><a href="">美容护肤</a></li>
+                                        <li><a href="">美容护肤</a></li>
+                                    </ul>
+                                </div>
+                           </li>
+                           <li class="list_total">
+                            <div class="list_row">
+                                <a href=""><h5>全球进口</h5></a>
+                                <ul class="list_row_det">
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                </ul>
+                            </div>
+                             <div class="list_row">
+                                 <a href=""><h5>全球进口</h5></a>
+                                 <ul class="list_row_det">
+                                     <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                 </ul>
+                             </div>
+                        </li>
+                        <li class="list_total">
+                            <div class="list_row">
+                                <a href=""><h5>全球进口</h5></a>
+                                <ul class="list_row_det">
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                </ul>
+                            </div>
+                             <div class="list_row">
+                                 <a href=""><h5>全球进口</h5></a>
+                                 <ul class="list_row_det">
+                                     <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                 </ul>
+                             </div>
+                        </li>
+                        <li class="list_total">
+                            <div class="list_row">
+                                <a href=""><h5>全球进口</h5></a>
+                                <ul class="list_row_det">
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                </ul>
+                            </div>
+                             <div class="list_row">
+                                 <a href=""><h5>全球进口</h5></a>
+                                 <ul class="list_row_det">
+                                     <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                 </ul>
+                             </div>
+                        </li>
+                        <li class="list_total">
+                            <div class="list_row">
+                                <a href=""><h5>全球进口</h5></a>
+                                <ul class="list_row_det">
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                </ul>
+                            </div>
+                             <div class="list_row">
+                                 <a href=""><h5>全球进口</h5></a>
+                                 <ul class="list_row_det">
+                                     <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                 </ul>
+                             </div>
+                        </li>
+                        <li class="list_total">
+                            <div class="list_row">
+                                <a href=""><h5>全球进口</h5></a>
+                                <ul class="list_row_det">
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                </ul>
+                            </div>
+                             <div class="list_row">
+                                 <a href=""><h5>全球进口</h5></a>
+                                 <ul class="list_row_det">
+                                     <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                    <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                     <li><a href="">美容护肤</a></li>
+                                 </ul>
+                             </div>
+                        </li>
+                        
+                         
                         </ol>
                     </li>
                     <li><a href="">金币签到</a></li>
@@ -79,9 +312,7 @@
             <!-- 如果需要导航按钮 -->
             <!-- <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div> -->
-            <!-- 如果需要滚动条 -->
-            <!-- <div class="swiper-scrollbar"></div> -->
-        </div>
+        </div>   
     </div>
     
     <!-- <div class="swiper-pagination"></div> -->
@@ -98,11 +329,12 @@
         disableOnInteraction: true,
         },
       effect : 'fade',
-      clickable :true,
       // 如果需要分页器
-      pagination: {
+      paginationClickable: true,
+      pagination :{
         el: '.swiper-pagination',
-      },
+        clickable :true,
+  },
       
       // 如果需要前进后退按钮
     //   navigation: {
@@ -131,7 +363,7 @@
     <div class="container timer">
         <div class="bc"></div>
         <div class="timer-product">
-            <ul>
+            <ul class="timer_pro_ul">
                 <!-- 设置第一个li的透明度 -->
                 <li class="tp-opc">
                     <a href="">
@@ -152,7 +384,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./details.html">
                         <img src="./../images/pd01.jpg" alt="">
                         <p>sikll人垂怜的可爱的商品美丽的货</p>
                         <!-- 进度条 -->
@@ -262,6 +494,8 @@
                 
             </ul>
          </div>
+
+
          <!-- 二维码定位 -->
          <div class="code">
              <div class="code-1">
@@ -280,6 +514,9 @@
 
          </div>
      </div>
+
+
+
     <!-- 产品 -->
     <div class="container product">
         <div class="pro-left">
@@ -632,12 +869,37 @@
         <div class="want-log container">
             <p>可能比你自己更懂你</p>
         </div>
-        <div class="want-hid">
-
+        <div class="want-hid container">
+            
         </div>   
     </div>
-
-    <!-- 底部 -->
+    <script type="text/template" id="waterfall">
+        {{each json}}
+        <div class="item" style="width:168px;height:236px;background:#fff;margin:0 10px 10px 0;cursor: pointer;">
+        <img src="{{$value.path}}" alt="" style="width:150px;height:150px;margin:9px;">
+            <p style="text-align:center;font-size:12px;overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;"
+            >{{$value.text}}</p>
+            <p style="text-align:center;color:red;font-size:14px;">{{$value.price}}</p>
+        </div>
+        {{/each}}
+    </script>
+    <script>  
+        $.get('./../lib/js/data.json',function(data){
+            console.log(1111)
+            var str = template('waterfall',{"json":data});
+            $('.lazy-load').one('click',function(){
+                    $('.want-hid').append(str)
+                })
+            $(window).scroll(function(){
+                if($(window).scrollTop()>=1750){
+                    $(".lazy-load").click()
+                }      
+            })      
+        },'json')
+    </script>
+    <!-- 底部模板 -->
     <script src="./../js/footer.js"></script>
+    <!-- js引入 -->
+    <script src="./../js/index.js"></script>
 </body>
 </html>

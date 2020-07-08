@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册页面</title>
+    <style type="text/css">
+          *{
+              margin: 0;
+              padding: 0;
+          }  
+          h2{
+              text-align: center;
+          }
+          form{
+              width: 400px;
+              line-height: 50px;     
+              margin: 100px auto;
+            /*   border: 1px solid #000000; */
+          } 
+          b{
+              margin-left: 70px;
+              margin-right: 20px;
+          }
+          span{
+              color: green;
+              font-size: 14px;
+              font-weight: bold;
+          }
+           input{
+               margin-left: 30px;
+               width: 150px;
+               height: 20px; 
+           }
+           input[type="submit"]{
+              margin-left: 120px;
+           }
+    </style>
+</head>
+<body>  
+    <form action="#" onsubmit="return fa()">
+        <h2>注册账号</h2>
+        <b>账号</b><input type="text" name="zh"/><span></span>
+        <br/>
+        <b>密码</b><input type="password" name="pw"/><span></span>
+        <br/>
+        <b>邮箱</b><input type="text" name="yx"/><span></span>
+        <br/>
+        <b>联系方式</b><input type="text" name="dh" style=" margin-left: 0px;"/><span></span>
+        <br/>
+        <b>出生日期</b><input type="text" name="cs" style=" margin-left: 0px;"/><span></span>   
+        <br/>
+        <input type="submit" value="提交"/>  
+    </form>
+    <script>
+        var user=document.getElementsByName('zh')[0];
+        var code=document.getElementsByName('pw')[0];
+        var email=document.getElementsByName('yx')[0];
+        var phone=document.getElementsByName('dh')[0];
+        var born=document.getElementsByName('cs')[0];
+        var spans=document.getElementsByTagName('span');
+        var on1=0;
+        var on2=0;
+        var on3=0;
+        var on4=0;
+        var on5=0;
+
+        //账号验证：开头为大写字母，由数字，小写字母和下划线组成的6到12位组合
+       user.onblur=function(){
+        var str1=user.value;
+        var reg1=/^([A-Z][0-9a-z\-]{5,15})|([\u4e00-\u9fa5]{0,})$/;
+        if(!reg1.test(str1)){
+            spans[0].innerHTML='账号输入有误';
+            this.focus();
+            on1=0;
+        }else{
+            spans[0].innerHTML='√';
+            on1=1;
+        }
+       }
+      
+       //密码验证：以字母开头，数字，下划线，字母组成的8到12位密码 
+       code.onblur=function(){
+        var str1= code.value;
+        var reg1=/^[a-zA-Z]\w{7,11}$/;
+        if(!reg1.test(str1)){
+            spans[1].innerHTML='密码格式错误';
+            this.focus();
+            on2=0;
+        }else{
+            spans[1].innerHTML='√';
+            on2=1;
+        }
+       }
+         
+         //邮箱验证：
+         email.onblur=function(){
+        var str1=email.value;
+        var reg1=/^\w+@(qq|163|sina)\.(com|cn)(\.com|\.cn)?$/;
+        if(!reg1.test(str1)){
+            spans[2].innerHTML='邮箱格式错误';
+            this.focus();
+            on3=0;
+        }else{
+            spans[2].innerHTML='√';
+            on3=1;
+        }
+       }
+
+        //电话验证：
+        phone.onblur=function(){
+        var str1=phone.value;
+        var reg1=/^(1|(861))[3-8]{1}\d{9}$/;
+        if(!reg1.test(str1)){
+            spans[3].innerHTML='电话格式错误';
+            this.focus();
+            on4=0;
+        }else{
+            spans[3].innerHTML='√';
+            on4=1;
+        }
+       }
+
+      //出生日期
+      born.onblur=function(){
+          var str1=born.value;
+          var reg1=/^\d{4}-(1[0-2]|0?[1-9])-(0?[1-9]|[12]\d|3[01])$/;
+          if(!reg1.test(str1)){
+              spans[4].innerHTML="日期格式错误";
+              this.focus();
+              on5=0;
+          }else{
+              spans[4].innerHTML="√";
+              on5=1;
+          }
+      }
+      
+       function fa(){
+         if(on1==1&&on2==1&&on3==1&&on4==1&&on5==1){
+             return true
+         }else{
+             return false
+         }
+       }
+    </script>
+</body>
+</html>

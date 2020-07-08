@@ -15,9 +15,9 @@ $header = `<div class="header">
         <ul>
             <li class="hd-login">
                 <span>晚上好,请</span>
-                <a href="">登录</a>
+                <a href="./login.html">登录</a>
             </li>
-            <li><a href="">注册</a></li>
+            <li><a href="./register.html">注册</a></li>
             <li><a href="">会员俱乐部</a></li>
             <li><a href="">我的订单</a></li>
         </ul>
