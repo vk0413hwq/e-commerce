@@ -13,17 +13,17 @@
             width: 2400px;
             height: 100px;
             background-color: palegoldenrod;
-            margin-top: 500px;
+            margin-top: 2000px;
         }
     </style>
 </head>
 <body>
-    <input type="text" name="" id="">
+    <div></div>
     <script>
         
-        $('input').change(function(){
-            console.log(1111)
-        })
+       
+            Y= $('div').offset().top - $(window).scrollTop();
+            console.log(Y)
         
     </script>
 </body>
