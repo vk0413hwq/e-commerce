@@ -2,8 +2,52 @@ $(function(){
     console.log(11234242424)
     $('#search-right-text').on('input',function(){
         //1 获取输入的关键字
-        console.log(11111)
-    })
+        console.log(2222)
+       var text = $(this).val();
+       //2 利用$.ajax发请求
+       $.ajax({
+           //callback=fn不能直接写在参数里面,要jquery帮助我们自动拼接
+           url:"https://suggest.taobao.com/sug?code=utf-8&q="+text+"&_ksTS=1593314375249_483&k=1&area=c2c&bucketid=12",
+           success:function(data){
+               //获取数据要先打印
+               var arr=data.result
+               $('.cb_show').empty()
+               $.each(arr,function(index,value){                     
+                   $('.cb_show').append('<li>'+value[0]+'</li>')
+                   $('.cb_show').css({'display':'block'})
+                   lishow()
+               })
+           },dataType:"jsonp"})
+            
+            $('.search-right').mouseleave(function(){
+                $('.cb_show').css({
+                    'display':'none'
+                })
+            })
+            }).click(function(){
+                lishow()
+                $('.cb_show').css({
+                    'display':'block'
+                })  
+            })
+            function lishow(){
+                $('.cb_show').children().each(function(){
+                    $(this).mouseenter(function(){
+                        $(this).css({
+                            'background':'#eee',
+                            'cursor':'pointer'
+                        })  
+                    }).mouseleave(function(){
+                        $(this).css({
+                            'background':'#fff',
+                            'cursor':'pointer'
+                        }) 
+                    })
+
+                })
+            }
+            
+    return
 
 
 
