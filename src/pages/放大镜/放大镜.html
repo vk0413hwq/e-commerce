@@ -60,7 +60,7 @@
 
         var ltwidth = lt.clientWidth
         var ltheight = lt.clientHeight
-        
+        console.log(ltwidth)
         var cwidth = cover.clientWidth
         // var cheight = cover.clientHeight
         
@@ -73,8 +73,8 @@
         }
         lt.onmousemove=function(e){
             var e=e||window.event;
-            var x=e.clientX-ltwidth/bs/bs;
-            var y=e.clientY-ltwidth/bs/bs;
+            var x=e.clientX-ltwidth/bs/2;
+            var y=e.clientY-ltwidth/bs/2;
             console.log(x,y)
             if(x<0){
                 x=0
@@ -89,7 +89,7 @@
 
             cover.style.left=x+'px';
             cover.style.top=y+'px';
-
+            console.log(x,y)
             p2.style.width=ltwidth*bs+'px'
             p2.style.height=ltheight*bs+'px'
             p2.style.marginTop=-bs*y+'px'
@@ -99,7 +99,7 @@
             cover.style.height=ltheight/bs+'px'
         }
         
-         console.log(lt)
+         
      </script>
 </body>
 </html>
