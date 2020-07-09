@@ -1,0 +1,481 @@
+body {
+  font-size: 12px;
+}
+
+.sc_up {
+  background-color: #f8f8f8;
+}
+
+.sc_up .up_all {
+  height: 80px;
+  margin: 0 auto;
+  width: 1200px;
+  padding-top: 25px;
+}
+
+.sc_up .up_all > a {
+  width: 142px;
+  height: 28px;
+  float: left;
+}
+
+.sc_up .up_all > a img {
+  float: left;
+  margin-right: 5px;
+}
+
+.sc_up .up_all .sc_send {
+  float: left;
+  width: 775px;
+  height: 27px;
+}
+
+.sc_up .up_all .sc_send span {
+  width: 190px;
+  padding: 3px;
+  height: 26px;
+  display: inline-block;
+  border: 1px #eee solid;
+  border-right: 5px;
+}
+
+.sc_up .up_all .sc_send span i {
+  margin: 0 10px;
+}
+
+.sc_up .up_all .sc_search {
+  width: 280px;
+  float: right;
+  border: 1px #eee solid;
+  border-radius: 3px;
+}
+
+.sc_up .up_all .sc_search input[type=text] {
+  outline: none;
+  width: 238px;
+  line-height: 30px;
+  border: none;
+  float: left;
+  padding-left: 10px;
+}
+
+.sc_up .up_all .sc_search input[type=sumbit] {
+  float: left;
+  width: 40px;
+  border: none;
+  line-height: 30px;
+}
+
+.sc_a {
+  background-color: #f8f8f8;
+}
+
+.sc_a .sc_total {
+  margin: 0 auto;
+  width: 1200px;
+  font-size: 12px;
+  color: #666;
+}
+
+.sc_a .sc_total span {
+  display: inline-block;
+}
+
+.sc_a .sc_total .sc_checked {
+  background-color: #fff;
+  height: 40px;
+  border: 1px #eee solid;
+  margin-bottom: 20px;
+  padding: 8px 0 12px 30px;
+}
+
+.sc_a .sc_total .sc_checked .sc1 {
+  width: 128px;
+}
+
+.sc_a .sc_total .sc_checked .sc1 input {
+  margin-right: 18px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+}
+
+.sc_a .sc_total .sc_checked .sc2 {
+  width: 425px;
+}
+
+.sc_a .sc_total .sc_checked .sc3 {
+  width: 192px;
+}
+
+.sc_a .sc_total .sc_checked .sc4 {
+  width: 205px;
+}
+
+.sc_a .sc_total .sc_checked .sc5 {
+  width: 128px;
+}
+
+.sc_a .sc_total .sc_size {
+  margin-bottom: 20px;
+}
+
+.sc_a .sc_total .sc_size .sc_details {
+  background-color: #fff;
+  height: 55px;
+  border: 1px #eee solid;
+  padding: 10px 0 20px 30px;
+}
+
+.sc_a .sc_total .sc_size .sc_details .sd1 {
+  width: 790px;
+}
+
+.sc_a .sc_total .sc_size .sc_details .sd1 input {
+  margin-right: 18px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+}
+
+.sc_a .sc_total .sc_size .sc_details .sd2 {
+  width: 255px;
+}
+
+.sc_a .sc_total .sc_size .sc_details .sd3 {
+  width: 81px;
+  color: #fff;
+  text-align: center;
+  line-height: 24px;
+  background-color: #f96a70;
+  border-radius: 4px;
+}
+
+.sc_a .sc_total .sc_size .sc_num {
+  background-color: #fff;
+  height: 163px;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  padding: 15px 0 0 30px;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_up {
+  margin-bottom: 25px;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_up .sn1 {
+  width: 298px;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_up .sn1 input {
+  margin-right: 20px;
+  margin-top: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_up .sn1 > i {
+  display: inline-block;
+  width: 36px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 2px;
+  margin-right: 12px;
+  color: #fff;
+  background-color: #f9a464;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_up .sn2 {
+  padding-left: 15px;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_up .sn2 > i {
+  text-align: center;
+  display: inline-block;
+  width: 76px;
+  line-height: 22px;
+  color: #f95c63;
+  border-radius: 4px;
+  background-color: #fef4f4;
+  border: 1px #fa8b8e solid;
+  margin-left: 14px;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_down {
+  height: 80px;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_down span {
+  display: block;
+  float: left;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_down .sm1 {
+  height: 75px;
+  width: 130px;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_down .sm1 input {
+  margin-right: 20px;
+  margin-top: 25px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  float: left;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_down .sm1 a {
+  float: left;
+  width: 75px;
+  height: 75px;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_down .sm1 a img {
+  width: 100%;
+  height: 100%;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_down .sm2 {
+  width: 255px;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_down .sm2 a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_down .sm2 i {
+  display: inline-block;
+  width: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 16px;
+  font-size: 8px;
+  border-radius: 3px;
+  margin-right: 10px;
+  margin-top: 5px;
+  background-color: #f9a464;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_down .sm2 em {
+  color: #aaaaaa;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_down .sm3 {
+  width: 334px;
+  text-align: center;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_down .sm4 {
+  width: 80px;
+  background-color: #fff;
+  height: 24px;
+  border: 1px #eee solid;
+  margin-right: 160px;
+  padding: 3px 0;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_down .sm4 button {
+  border: none;
+  width: 20px;
+  height: 18px;
+  float: left;
+  outline: none;
+  background-color: #fff;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_down .sm4 input {
+  background-color: #fff;
+  outline: none;
+  text-align: center;
+  width: 38px;
+  height: 18px;
+  border: none;
+  border-left: 1px #eee solid;
+  border-right: 1px #eee solid;
+  float: left;
+}
+
+.sc_a .sc_total .sc_size .sc_num .li_down .sm5 {
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+  width: 110px;
+}
+
+.sc_a .sc_total .sc_size .sc_totalval {
+  background-color: #fff;
+  height: 50px;
+  border: 1px #eee solid;
+  padding-top: 15px;
+  padding-right: 25px;
+  text-align: right;
+}
+
+.sc_a .sc_total .sc_size .sc_totalval .sl1 i, .sc_a .sc_total .sc_size .sc_totalval .sl1 em {
+  color: red;
+}
+
+.sc_b {
+  margin-top: 20px;
+  font-size: 12px;
+  background-color: #fff;
+}
+
+.sc_b .sc_price {
+  height: 60px;
+  margin: 0 auto;
+  width: 1200px;
+  padding-top: 15px;
+  padding-left: 30px;
+}
+
+.sc_b .sc_price span {
+  display: inline-block;
+}
+
+.sc_b .sc_price .sp1 {
+  cursor: pointer;
+  width: 133px;
+  border-right: 2px #eee solid;
+}
+
+.sc_b .sc_price .sp1 input {
+  margin-right: 20px;
+  margin-top: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+}
+
+.sc_b .sc_price .sp2 {
+  cursor: pointer;
+  width: 650px;
+  color: #999;
+  padding-left: 24px;
+}
+
+.sc_b .sc_price .sp3 {
+  width: 115px;
+  color: #999;
+  border-right: 2px #eee solid;
+  margin-right: 4px;
+}
+
+.sc_b .sc_price .sp3 em {
+  cursor: pointer;
+  color: #c3a5b3;
+}
+
+.sc_b .sc_price .sp4 {
+  width: 134px;
+  padding-left: 16px;
+}
+
+.sc_b .sc_price .sp4 i {
+  color: #f95c63;
+  font-size: 20px;
+}
+
+.sc_b .sc_price .sp5 {
+  cursor: pointer;
+  width: 110px;
+  color: #fff;
+  line-height: 60px;
+  text-align: center;
+  background-color: #f96a70;
+  margin-top: -20px;
+}
+
+.sc_c {
+  background-color: #f8f8f8;
+  margin-top: 40px;
+}
+
+.sc_c .sc_like {
+  height: 626px;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.sc_c .sc_like .like_up {
+  height: 70px;
+  padding-top: 15px;
+}
+
+.sc_c .sc_like .like_up > p {
+  text-align: center;
+  color: #fa974e;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.sc_c .sc_like .like_up > span {
+  font-size: 12px;
+  text-align: center;
+  display: block;
+  color: #999999;
+}
+
+.sc_c .sc_like .like_down {
+  background-color: #fff;
+  height: 520px;
+  font-size: 12px;
+  border: 1px #eee solid;
+}
+
+.sc_c .sc_like .like_down .slide_box {
+  padding: 40px 75px;
+}
+
+.sc_c .sc_like .like_down .slide_box dl {
+  margin-right: 72px;
+  float: left;
+  height: 240px;
+  width: 150px;
+}
+
+.sc_c .sc_like .like_down .slide_box dl:nth-of-type(5), .sc_c .sc_like .like_down .slide_box dl:nth-of-type(10) {
+  margin-right: 0px;
+}
+
+.sc_c .sc_like .like_down .slide_box dl dt {
+  cursor: pointer;
+  width: 100%;
+  height: 150px;
+}
+
+.sc_c .sc_like .like_down .slide_box dl dt img {
+  width: 100%;
+  height: 100%;
+}
+
+.sc_c .sc_like .like_down .slide_box dl dd {
+  text-align: center;
+}
+
+.sc_c .sc_like .like_down .slide_box dl dd p {
+  margin-top: 12px;
+  color: #f95c63;
+}
+
+.sc_c .sc_like .like_down .slide_box dl dd p span {
+  font-size: 15px;
+}
+
+.sc_c .sc_like .like_down .slide_box dl dd a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+/*# sourceMappingURL=shop.css.map */
+
+/*# sourceMappingURL=shop.css.map */

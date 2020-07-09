@@ -10,8 +10,7 @@ $(function(){
 
     // 遮蔽层的文档宽高
     var $cw = $midbox.offset()
-    console.log($cw.left)
-    console.log($cw.top)
+
     
     // 下面轮播图片发生变动时，循环给图片地址
     $fdlist.each(function () {
@@ -28,7 +27,6 @@ $(function(){
         //  设置光标点  赋值给遮蔽层
            var x = e.clientX - $cw.left-$cover.innerWidth()/2-19;
            var y = e.clientY - J-$cover.innerHeight()/2-19;
-           console.log(x,y)
         //  设置偏移边界
            if(x<0){
             x=0
@@ -69,27 +67,29 @@ $(function(){
       })
 
     // 渲染页面
-    $.get('./../php/showlist.php',function(data){
-        var json = JSON.parse(data).data
-        var arr = json[0]
-        var p_id = arr.product_id;
-        var p_name = arr.product_name;
-        var p_img = arr.product_img;
-        var p_price = arr.product_price;
-        var p_num = arr.product_num;
+    var strPid = location.href.split('?')[1]
+    var pid = strPid.split('=')[1]
+    
+    $.get('./../php/details.php?pid='+pid,function(data){
+        var json = JSON.parse(data)
+        var arr=json.data[0];
+        
 
-        // ${pid} ${pname} ${pimg} ${pprice} ${pnum}
-        $('.details_price01').html(p_price);
-        $('.details_name01').html(p_name); 
-
-       
-        })
-      // 详情页添加商品
+        $('.details_price01').html(arr.product_price);
+        $('.details_name01').html(arr.product_name); 
+        $('.lb_container').find('img').attr('src',arr.product_img); 
+        $('.sp1').attr('src',arr.product_img); 
+         
+        
+    // 详情页添加商品
+    //   监听数量变化
+      var $numbtn =  $('#pro_num');
+      $numbtn.on('change',function(){
+      var $num = $('#pro_num').val();
       var $btn_addcart = $('.join-sc');
-      var $num = $('#pro_num');
       $btn_addcart.click(function(){
-      console.log($num.val())
-          $.get('./../php/addwq.php?id=1&name=牛油果&img=./../images/nyg (1).jpg&price=25',function(data){
+          $.get('./../php/addwq.php?id='+pid+'&name='+arr.product_name+'&img='+arr.product_img+'&price='+arr.product_price+'&num='+$num,function(data){
+              console.log(data)
               var json = JSON.parse(data);
               if(json.code){
                   // 如果添加成功弹出隐藏底幕
@@ -104,7 +104,14 @@ $(function(){
                   })
               }
           })
- })   
+     })
+    })
+       
+     
+     
+ })
+        
+      
 
 
     

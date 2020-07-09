@@ -175,39 +175,44 @@ body{
         }
       }     
      }
+
+    /*
+    商品描述
+    */
+    
         .details_all_choose{
-            padding:0 25px ;
-            width:620px ;
-            float: left;
-            .title{
-                // background-color: plum;
-                text-align: center;
-                height: 42px;
-                dt{
-                    width: 30px;
-                    font-size:11px ;
-                    color:#f9646a ;
-                    border: 1px solid #efa3ae;
-                    height: 16px;
-                    margin: 14px 7px 0 0;
-                    float: left;
-                }
-                dd{
-                    margin-top: 12px;
-                    font-weight: bold;
-                    float: left;
-                    font-size:15px ;
-                    color:#333333 ;
-                }
-            }
-            .price{
-                height: 48px;
-                padding: 5px 0;
-                background-color: #fce5e1;
-                border-top: 1px #fccbc5 solid;
-                border-bottom: 1px #fccbc5 solid;
-                span{
-                    color: #666666;
+           padding:0 25px ;
+           width:620px ;
+           float: left;
+           .title{
+            overflow: hidden;
+               text-align: center;             
+                  dt{                 
+                   width: 30px;
+                   font-size:11px ;
+                   color:#f9646a ;
+                   border: 1px solid #efa3ae;
+                   height: 16px;
+                   margin: 10px 7px 0 0;
+                   float: left;
+               }
+               dd{
+                   text-align: left;
+                   width: 530px;
+                   font-weight: bold;
+                   float: right;
+                   font-size:15px ;
+                   color:#333333 ;
+               }             
+           }
+           .price{
+               height: 48px;
+               padding: 5px 0;
+               background-color: #fce5e1;
+               border-top: 1px #fccbc5 solid;
+               border-bottom: 1px #fccbc5 solid;
+               span{
+                   color: #666666;
                     // display: ;
                     margin: 0 26px 0 10px;
                 }

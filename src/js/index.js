@@ -1,5 +1,37 @@
 $(function(){
-    console.log(11234242424)
+
+
+    // 首页渲染数据
+    $.get('./../php/index.php',function(data){
+        var json = JSON.parse(data)
+        var arr=json.data;
+
+        $(arr).each(function(index,item){  
+            var pid = $(this).attr('product_id');
+            var pname = $(this).attr('product_name');
+            var pimg = $(this).attr('product_img');
+            var pprice = $(this).attr('product_price');
+            var pnum = $(this).attr('product_pnum');
+            
+            var str12 = `
+            <a href="./details.html?pid=${pid}">
+            <img src="${pimg}" alt="">
+            <p>${pname}</p>
+            <div class="load"><span></span></div>
+            <div class="cheap">
+                ￥${pprice}
+                <s class="original">${Number(pprice)+15}</s>
+            </div>
+            </a>'`   
+            var $li = $("<li>"); 
+            $li.html(str12)    
+            $li.attr('pid',pid)  
+            $('.tp-opc').after($li)
+    })
+})
+
+
+    // 搜索栏——关键字搜索
     $('#search-right-text').on('input',function(){
         //1 获取输入的关键字
         console.log(2222)
@@ -47,15 +79,11 @@ $(function(){
                 })
             }
             
-    return
-
-
-
-            // 搜索栏 input hover
+        // 搜索栏 input hover
         $('#search-right-text').mouseenter(function(){
             $(this).css({'border-color':'red'})
             .next().css({'border-color':'red'})
-        }).mouseleaves(function(){
+        }).mouseleave(function(){
             $(this).css({'border-color':'#e2e2e2'})
             .next().css({'border-color':'#e2e2e2'})
         }).next().mouseenter(function(){

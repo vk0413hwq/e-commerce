@@ -36,13 +36,13 @@ const cssminHandler = ()=>{
     .pipe(gulp.dest('./dist/css'))
 }
 // sass打包任务
-const sassHandler = ()=>{
-    return gulp.src('./src/sass/*.scss')
-    .pipe(sass())
-    .pipe(autoprefixer())
-    .pipe(cssmin())
-    .pipe(gulp.dest('./dist/css'))
-}
+// const sassHandler = ()=>{
+//     return gulp.src('./src/sass/*.scss')
+//     .pipe(sass())
+//     .pipe(autoprefixer())
+//     .pipe(cssmin())
+//     .pipe(gulp.dest('./dist/css'))
+// }
 
 // 进行html打包 gulp-htmlmin
 const htmlHandler = ()=>{
@@ -95,7 +95,7 @@ const watchHandler = ()=>{
     gulp.watch('./src/css/*.css',cssminHandler);
     gulp.watch('./src/lib/**',libHandler);
     gulp.watch('./src/images/**',imgHandler);
-    gulp.watch('./src/sass/*/sass',sassHandler);
+    // gulp.watch('./src/sass/*/sass',sassHandler);
 }
 
 
@@ -113,7 +113,7 @@ const watchHandler = ()=>{
 // 有两种组合方法，就不用一个个导出和输入任务名了 gulp.series（任务1，任务2） 这种是按照顺序的~~~~   gulp.parallel(任务1，任务2)
 module.exports.default = gulp.series(
     delHandler,
-    gulp.parallel(cssminHandler,uglifyHandler,htmlHandler,imgHandler,libHandler,sassHandler),
+    gulp.parallel(cssminHandler,uglifyHandler,htmlHandler,imgHandler,libHandler),
     // webserverHandler,
     watchHandler
 )

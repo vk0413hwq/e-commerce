@@ -1,0 +1,1 @@
+"use strict";$(function(){console.log(11111);var n=$(".text"),t=$(".psd");$("button").click(function(){$.get("./../php/login.php?username="+n.val()+"&password="+t.val(),function(l){JSON.parse(l).code?location.href="./index.html?name="+n.val():(alert("账号或者密码错误"),t.val(null),n.val(null))})})});
