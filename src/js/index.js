@@ -1,9 +1,17 @@
 $(function(){
+    console.log(11234242424)
+    $('#search-right-text').on('input',function(){
+        //1 获取输入的关键字
+        console.log(11111)
+    })
+
+
+
             // 搜索栏 input hover
         $('#search-right-text').mouseenter(function(){
             $(this).css({'border-color':'red'})
             .next().css({'border-color':'red'})
-        }).mouseleave(function(){
+        }).mouseleaves(function(){
             $(this).css({'border-color':'#e2e2e2'})
             .next().css({'border-color':'#e2e2e2'})
         }).next().mouseenter(function(){

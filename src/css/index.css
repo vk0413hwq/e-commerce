@@ -161,6 +161,7 @@ a{
 .search .search-right{
     padding-top:50px ;
     padding-left:119px ;
+    position: relative;
 }
 .search .search-right ul li{
     float: left;
@@ -186,7 +187,14 @@ a{
     outline: none;
     text-align: center;
 }
-
+.search .search-right .cb_show{
+    width: 300px;
+    height: 200px;
+    background-color: pink;
+    position: absolute;
+    top: 90px;
+    z-index: 2000;
+}
 .search .search-right >a{
     width:120px ;
     float: left;
