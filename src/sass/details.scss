@@ -316,7 +316,7 @@ body{
                  }
                  ._right{
                     float: left;
-                    ._top{
+                    .d_top{
                         height: 62px;
                     }
                     ._shopcar{
@@ -394,6 +394,7 @@ body{
             height: 597px;
             border: 1px solid #eaeaea;
             ._top{
+                overflow: hidden;
                 padding: 0 24px;
                 line-height:30px ;
                 border-bottom: 1px solid #eaeaea;

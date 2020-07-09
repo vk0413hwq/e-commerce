@@ -313,7 +313,7 @@ body .details_main .details_all .details_all_choose .delivery p {
 body .details_main .details_all .details_all_choose .delivery ._right {
   float: left;
 }
-body .details_main .details_all .details_all_choose .delivery ._right ._top {
+body .details_main .details_all .details_all_choose .delivery ._right .d_top {
   height: 62px;
 }
 body .details_main .details_all .details_all_choose .delivery ._right ._shopcar {
@@ -388,6 +388,7 @@ body .details_main .details_all .details_all_more {
   border: 1px solid #eaeaea;
 }
 body .details_main .details_all .details_all_more ._top {
+  overflow: hidden;
   padding: 0 24px;
   line-height: 30px;
   border-bottom: 1px solid #eaeaea;
