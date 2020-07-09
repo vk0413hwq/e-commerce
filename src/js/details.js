@@ -97,15 +97,17 @@ $(function(){
                       'display':'block'
                   })
                   $('.sh_lt').click(function(){
-                      location.href = './details.html'
+                      location.href = './details.html?pid='+pid
                   })
                   $('.sh_gt').click(function(){
                       location.href = './shopcart.html'
                   })
               }
           })
-     })
+       })
     })
+      
+   
        
      
      
