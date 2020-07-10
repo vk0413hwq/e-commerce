@@ -66,28 +66,28 @@ $(function(){
         })
       })
 
-    // 渲染页面
+    // 获取首页用户点击的商品id
     var strPid = location.href.split('?')[1]
     var pid = strPid.split('=')[1]
     
+
+    // 获取该id的商品信息
     $.get('./../php/details.php?pid='+pid,function(data){
         var json = JSON.parse(data)
         var arr=json.data[0];
-        
-
+        // 渲染页面
         $('.details_price01').html(arr.product_price);
         $('.details_name01').html(arr.product_name); 
         $('.lb_container').find('img').attr('src',arr.product_img); 
         $('.sp1').attr('src',arr.product_img); 
          
         
-    // 详情页添加商品
-    //   监听数量变化
-      var $numbtn =  $('#pro_num');
-      $numbtn.on('change',function(){
-      var $num = $('#pro_num').val();
+    // 详情页加入购物车-添加商品
       var $btn_addcart = $('.join-sc');
       $btn_addcart.click(function(){
+        // 获取数量信息
+          var $num = $('#pro_num').val()   ;  
+        //添加该id的商品信息
           $.get('./../php/addwq.php?id='+pid+'&name='+arr.product_name+'&img='+arr.product_img+'&price='+arr.product_price+'&num='+$num,function(data){
               console.log(data)
               var json = JSON.parse(data);
@@ -105,11 +105,8 @@ $(function(){
               }
           })
        })
-    })
-      
-   
+    
        
-     
      
  })
         
