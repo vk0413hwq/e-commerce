@@ -7,12 +7,16 @@ $(function(){
                 return
              }  
         var arr =json.data
+        var pnum;
+        var pprice;
+        var pid;
         $.each(arr, function (index,value) { 
-        var pid = arr[index].product_id;
+         pid = arr[index].product_id;
         var pname = arr[index].product_name;
         var pimg = arr[index].product_img;
-        var pprice = arr[index].product_price;
-        var pnum = arr[index].product_num;
+         pprice = arr[index].product_price;
+         pnum = arr[index].product_num;
+
         //事件尽量写在插入元素之后，避免获取不到
         var product = `<div class="sc_size" id="${pid}">
         <!-- 商品门店 -->
@@ -69,18 +73,21 @@ $(function(){
         </div>
     </div>`;
         $('.sc_checked').after(product)
-    });
-        
-
 
         //监听数量发生改变时
-        $('#sc_num').change(function(){
-        var scnum = $(this).val()
-        $.get('./../php/change.php?id=1&scnum='+scnum,function(data){
-                   
-           })   
-        })  
-
+        $('#sc_num').each(function(){
+            console.log($(this))
+            $(this).change(function(){
+                var scnum = $(this).val()
+                var thisId = $(this).parents('.sc_size').attr('id');
+                console.log(thisId)
+                $.get('./../php/change.php?id=1&scnum='+scnum,function(data){
+                    subtotal()   
+                 })   
+             })
+        })
+    });
+        
         // 购物车删除商品功能
         $sc_del = $('.sc_del');
         $sc_del.click(function(){
@@ -91,6 +98,7 @@ $(function(){
                         console.log('删除陈功')
                     }
             })
+            subtotal()
         })
 
         //减少数量按钮功能
@@ -113,6 +121,7 @@ $(function(){
             }) 
             // 直接输出--但是不符合逻辑
             $valnum.val($val-1)
+            subtotal() 
         })
 
         //  增加数量按钮功能
@@ -131,17 +140,37 @@ $(function(){
                 console.log($val)
                 // 直接输出--但是不符合逻辑
                 $valnum.val($val+1)
-            })
+            subtotal() 
+        })
 // _____当商品多的时候，需要根据id来循环，给各项数据赋值
 
         // 小计  // 总计
-        // function subtotal(){
-        //     var totalAll = pprice*pnum
-        //     var subtotal = $('.sm5').html(totalAll)
-        //     $('.p_tatol').html(totalAll)
-        //     $('.sp4_total').html($('.p_tatol').html())
-        // }
-        // subtotal()
+        function subtotal(){
+            var a=0;
+            $('.sc_size').each(function(index){
+            // 单价*数量=小计
+            var thisprice = $(this).find('.sm3').html();
+            var thisnum = $(this).find('#sc_num').val();
+            var $xiaoji = (thisprice*thisnum).toFixed(2);
+            // 每个店铺的小计
+            $(this).find('.sm5').html($xiaoji)
+            // $('.sm5')[index].html()
+            // 每个店铺的总计
+            var $thisval = $(this).find('.sc_totalval');
+            $thisval.html($xiaoji)
+            // 所有店铺的总计
+            var $totalval =  $('.sp4_total');
+            
+            var b=a+parseInt($thisval.html());
+            a=b
+            $totalval.html(b)
+            })
+            // var totalAll = pprice*pnum
+            // var subtotal = $('.sm5').html(totalAll)
+            // $('.p_tatol').html(totalAll)
+            // $('.sp4_total').html($('.p_tatol').html())
+        }
+        subtotal()
 
         
         
