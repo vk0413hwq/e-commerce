@@ -101,27 +101,37 @@ $(function(){
 
         $cutbtn.click(function(){
         var did = $(this).parents('.sc_size').attr('id');
-        var $val = $(this).next().val()
+        var $valnum = $(this).next()
+        var $val = Number($(this).next().val())
             $.get('./../php/updatewq.php?id='+did+'&type='+$cuttype,function(data){
                 var json = JSON.parse(data).code;   
                 if(json){
-                    $val--
-                    console.log(did)
-                    console.log($('.sc_size').has('#did').find('#sc_num'))
+                    //数据库判断有延迟
+                    // $val--
+                    // $valnum.val($val)
                 }        
-            })          
+            }) 
+            // 直接输出--但是不符合逻辑
+            $valnum.val($val-1)
         })
 
         //  增加数量按钮功能
         $addbtn.click(function(){
-        var $did = $(this).parents('.sc_size').attr('id');
-        var $val = $(this).prev().val()
-            $.get('./../php/updatewq.php?id='+$did+'&type='+$addtype,function(data){
-                // var pnum = $('#sc_num').val()
-                --$val
-                // subtotal()
+            var did = $(this).parents('.sc_size').attr('id');
+            var $valnum = $(this).prev()
+            var $val = Number($(this).prev().val())
+                $.get('./../php/updatewq.php?id='+did+'&type='+$addtype,function(data){
+                    var json = JSON.parse(data).code;   
+                    if(json){
+                        //数据库判断有延迟
+                        // $val++
+                        // $valnum.val($val)
+                    }        
+                }) 
+                console.log($val)
+                // 直接输出--但是不符合逻辑
+                $valnum.val($val+1)
             })
-        })
 // _____当商品多的时候，需要根据id来循环，给各项数据赋值
 
         // 小计  // 总计
