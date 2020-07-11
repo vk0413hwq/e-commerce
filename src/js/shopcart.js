@@ -1,35 +1,37 @@
-$(function(){
-    //判断是否登录过，存在cookie与否  
-    class Cookie{
-        constructor(){
-            this.tz()
-            // 判断是否存在cookie    
-        }
-        judge(key){
-        var arr=(document.cookie).split(';');
-        for (var i = 0; i < arr.length; i++) {
-                var s = arr[i].split("=");
-                if (s[0] == key) {
-                    return true
-                }
-            }   
-            return false;
-        }
-        tz(){
-            if(this.judge('username')){
-                console.log('欢迎您登录')
-                // location.href='./index.htmname=username'
-                // return
-            }
-            else{
-                alert('请先登录账号')
-                location.href='./login.html'
-            } 
-            
-        }
+class Cookie{
+    constructor(){
+        this.tz()
+        // 判断是否存在cookie    
     }
-    new Cookie();
+    judge(key){
+    var arr=(document.cookie).split(';');
+    for (var i = 0; i < arr.length; i++) {
+            var s = arr[i].split("=");
+            if (s[0] == key) {
+                return true
+            }
+        }   
+        return false;
+    }
+    tz(){
+        if(this.judge('username')){
+            console.log('欢迎您登录')
+            // location.href='./index.htmname=username'
+            return
+        }
+        else{
+            alert('请先登录账号')
+            location.href='./login.html'
+            return
+        } 
+        
+    }
+}
+new Cookie();
+(function(){
+    //判断是否登录过，存在cookie与否  
     
+
     // 获取购物车所有数据
     $.get('./../php/showlist.php',function(data){
         var json = JSON.parse(data)
