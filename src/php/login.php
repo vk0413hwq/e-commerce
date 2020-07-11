@@ -14,7 +14,7 @@ $res = mysqli_query($link,$sql);
 $row = mysqli_fetch_assoc($res);
 
 if($row){
-    setcookie('username', $name, time()+10800,'/');
+    setcookie('username', $name, time()+108000,'/');
     $arr=array("code"=>1);
     $json = json_encode($arr);
     echo $json;
